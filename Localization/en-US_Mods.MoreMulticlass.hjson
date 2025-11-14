@@ -1,0 +1,97 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	BasicSword: {
+		DisplayName: Basic Sword
+		Tooltip:
+			'''
+			Tooltip: My first sword
+			Replacing this tooltip is duty 
+			It's snowing on Mt.Fuji
+			'''
+	}
+
+	ChummyBreastplate: {
+		DisplayName: Chummy Breastplate
+		Tooltip:
+			'''
+			+{0}% Ranged Damage
+			+{1} minions
+			+{2} aggro
+			'''
+	}
+
+	ChummyHelmet: {
+		SetBonus: Mods.MoreMulticlass.Items.ChummyHelmet.SetBonus
+		DisplayName: Chummy Helmet
+		Tooltip: ""
+	}
+
+	ChummyLeggings: {
+		DisplayName: Chummy Leggings
+		Tooltip: ""
+	}
+
+	SkeletonVikingHelmet: {
+		SetBonus: Mods.MoreMulticlass.Items.SkeletonVikingHelmet.SetBonus
+		DisplayName: Skeleton Viking Helmet
+		Tooltip: ""
+	}
+
+	SkeletonVikingBreastplate: {
+		DisplayName: Skeleton Viking Breastplate
+		Tooltip: ""
+	}
+
+	SkeletonVikingLeggings: {
+		DisplayName: Skeleton Viking Leggings
+		Tooltip: ""
+	}
+
+	WyvernHelmet: {
+		SetBonus: Mods.MoreMulticlass.Items.WyvernHelmet.SetBonus
+		DisplayName: Wyvern Helmet
+		Tooltip: ""
+	}
+
+	WyvernBreastplate: {
+		DisplayName: Wyvern Breastplate
+		Tooltip: ""
+	}
+
+	WyvernLeggings: {
+		DisplayName: Wyvern Leggings
+		Tooltip: ""
+	}
+
+	NanomachineBreastplate: {
+		DisplayName: Nanomachine Breastplate
+		Tooltip: ""
+	}
+
+	NanomachineLeggings: {
+		DisplayName: Nanomachine Leggings
+		Tooltip: ""
+	}
+
+	NanomachineHelmet: {
+		SetBonus: Mods.MoreMulticlass.Items.NanomachineHelmet.SetBonus
+		DisplayName: Nanomachine Helmet
+		Tooltip: ""
+	}
+}
+
+Buffs: {
+	BerserkerRage: {
+		DisplayName: Berserker Rage
+		Description: Mods.MoreMulticlass.Buffs.BerserkerRage.Description
+	}
+
+	Marked: {
+		DisplayName: Marked
+		Description: Mods.MoreMulticlass.Buffs.Marked.Description
+	}
+}
+
+"Keybinds.Armor Set Ability.DisplayName": Armor  Set  Ability
+Projectiles.NanomachineSetMeleeProjectile.DisplayName: Nanomachine Set Melee Projectile

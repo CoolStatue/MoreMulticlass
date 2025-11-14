@@ -1,0 +1,80 @@
+﻿using System;
+using Humanizer;
+using Terraria;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+
+namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
+{
+	// The AutoloadEquip attribute automatically attaches an equip texture to this item.
+	// Providing the EquipType.Head value here will result in TML expecting a X_Head.png file to be placed next to the item's main texture.
+	[AutoloadEquip(EquipType.Head)]
+	public class ChummyHelmet : ModItem
+	{
+		public static readonly int RangedCritBonus = 5;
+
+		public static readonly int AggroIncrease = 250;
+
+		//ForSetBonus
+		public static readonly int SetBonusRangedDamageBonus = 20;
+		public static readonly int SetBonusSummonDamageBonus = 15;
+		public static readonly int SetBonusRangedCritBonus = 5;
+		public static readonly int SetBonusDefensePenalty = 3;
+
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(RangedCritBonus, AggroIncrease);
+
+		public static LocalizedText SetBonusText { get; private set; }
+
+		public override void SetStaticDefaults()
+		{
+			// If your head equipment should draw hair while drawn, use one of the following:
+			// ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false; // Don't draw the head at all. Used by Space Creature Mask
+			// ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true; // Draw hair as if a hat was covering the top. Used by Wizards Hat
+			// ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true; // Draw all hair as normal. Used by Mime Mask, Sunglasses
+			// ArmorIDs.Head.Sets.DrawsBackHairWithoutHeadgear[Item.headSlot] = true;
+
+			SetBonusText = this.GetLocalization("SetBonus").WithFormatArgs(SetBonusRangedDamageBonus, SetBonusRangedCritBonus, SetBonusSummonDamageBonus, SetBonusDefensePenalty);
+		}
+
+        public override void UpdateEquip(Player player)
+        {
+			base.UpdateEquip(player);
+			player.aggro += AggroIncrease; // Increases player's aggro
+			player.GetCritChance(DamageClass.Ranged) += RangedCritBonus; //Increases player's Ranged Crit Chance 
+        }
+
+
+		public override void SetDefaults() {
+			Item.width = 18; // Width of the item
+			Item.height = 18; // Height of the item
+			Item.value = Item.sellPrice(gold: 1); // How many coins the item is worth
+			Item.rare = ItemRarityID.Green; // The rarity of the item
+			Item.defense = 2; // The amount of defense the item will give when equipped
+		}
+
+		// IsArmorSet determines what armor pieces are needed for the setbonus to take effect
+		public override bool IsArmorSet(Item head, Item body, Item legs) {
+			return body.type == ModContent.ItemType<ChummyBreastplate>() 
+				&& legs.type == ModContent.ItemType<ChummyLeggings>();
+		}
+
+		// UpdateArmorSet allows you to give set bonuses to the armor.
+		public override void UpdateArmorSet(Player player) {
+			player.setBonus = SetBonusText.Value; // This is the setbonus tooltip: "Increases dealt damage by 20%"
+
+			player.GetDamage(DamageClass.Ranged) += SetBonusRangedDamageBonus / 100f; // Increase Ranged dmg
+			player.GetCritChance(DamageClass.Ranged) += SetBonusRangedCritBonus / 100f; // Increase RAnged crit chance
+			player.GetDamage(DamageClass.Summon) += SetBonusSummonDamageBonus / 100f;
+			player.statDefense -= SetBonusDefensePenalty;
+		}
+
+		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
+		public override void AddRecipes() {
+			CreateRecipe()
+				.AddIngredient(ItemID.ChumBucket, 10)
+				.AddTile(TileID.Anvils)
+				.Register();
+		}
+	}
+}

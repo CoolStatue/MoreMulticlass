@@ -1,0 +1,65 @@
+using System.Collections.Generic;
+using Terraria;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using MoreMulticlass.Content.Buffs;
+
+namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
+{
+    public class SkeletonVikingHelmetOverride : GlobalItem
+    {
+
+        public static readonly int RangedCritBonus = 5;
+
+        
+
+		public static LocalizedText SetBonusText { get; private set; }
+
+        public override bool AppliesToEntity(Item entity, bool lateInstantiation)
+        {
+            return entity.type == ItemID.VikingHelmet;
+        }
+
+        public override void SetDefaults(Item item)
+        {
+            item.width = 18; // Width of the item
+            item.height = 18; // Height of the item
+            item.value = Item.sellPrice(gold: 1); // How many coins the item is worth
+            item.rare = ItemRarityID.Green; // The rarity of the item
+            item.defense = 4;
+        }
+
+        public override void UpdateEquip(Item item, Player player)
+        {
+            player.GetCritChance(DamageClass.Ranged) += RangedCritBonus; //Increases player's Ranged Crit Chance 
+
+        }
+
+        public override string IsArmorSet(Item head, Item body, Item legs)
+        {
+            if (body.type == ModContent.ItemType<SkeletonVikingBreastplate>()
+                && legs.type == ModContent.ItemType<SkeletonVikingLeggings>())
+            {
+                return "Skeleton Viking Set";
+            }
+            return "";
+        }
+        
+        public override void UpdateArmorSet(Player player, string str)
+        {
+            if (str == "Skeleton Viking Set")
+            {
+                player.setBonus = SetBonusText.Value; // This is the setbonus tooltip: "Increases dealt damage by 20%"
+                // player.statLifeMax2 += 400; // TODO MAKE THE ACTUAL SET BONUS
+
+                if (player.statLife < player.statLifeMax2 * 0.25f)
+                {
+                    player.AddBuff(ModContent.BuffType<BerserkerRage>(), 2);
+                }
+            }
+        }
+        
+
+    }
+}
