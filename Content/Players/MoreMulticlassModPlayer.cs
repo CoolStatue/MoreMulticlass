@@ -14,6 +14,7 @@ namespace MoreMulticlass.Content.Players
     {
         public bool hasWyvernSet;
         public bool hasNanomachineSet;
+        public bool hasDjinnSet;
         public int NanomachineMeleeProjectileCooldown = 0;
         public bool summonsApplyMarked;
         private bool dashing;
@@ -31,6 +32,7 @@ namespace MoreMulticlass.Content.Players
             hasWyvernSet = false;
             summonsApplyMarked = false;
             hasNanomachineSet = false;
+            hasDjinnSet = false;
             if (NanomachineMeleeProjectileCooldown > 0)
             {
                 NanomachineMeleeProjectileCooldown--;
