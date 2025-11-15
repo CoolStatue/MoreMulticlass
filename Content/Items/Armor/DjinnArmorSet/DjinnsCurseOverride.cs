@@ -30,8 +30,17 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 
         public override void UpdateEquip(Item item, Player player)
         {
-            
-            
+
+
+        }
+
+        public override void AddRecipes()
+        {
+            Recipe.Create(ItemID.DjinnsCurse, 1)
+                .AddIngredient(ItemID.SoulofNight, 8)
+                .AddIngredient(ItemID.SoulofFlight, 8)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
         }
     }
 }

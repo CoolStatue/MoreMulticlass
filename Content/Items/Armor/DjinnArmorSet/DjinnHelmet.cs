@@ -9,7 +9,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 	// The AutoloadEquip attribute automatically attaches an equip texture to this item.
 	// Providing the EquipType.Body value here will result in TML expecting a X_Body.png file to be placed next to the item's main texture.
 	[AutoloadEquip(EquipType.Head)]
-	public class DJinnHelmet : ModItem
+	public class DjinnHelmet : ModItem
 	{
 
 
@@ -27,6 +27,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 			// ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true; // Draw hair as if a hat was covering the top. Used by Wizards Hat
 			// ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true; // Draw all hair as normal. Used by Mime Mask, Sunglasses
 			// ArmorIDs.Head.Sets.DrawsBackHairWithoutHeadgear[Item.headSlot] = true;
+            ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true;
 
 			SetBonusText = this.GetLocalization("SetBonus").WithFormatArgs(SetProjDamageBoost);
 		}
@@ -46,23 +47,23 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs) {
-			return body.type == ModContent.ItemType<DJinnBreastplate>() 
+			return body.type == ModContent.ItemType<DjinnBreastplate>() 
 				&& legs.type == ItemID.DjinnsCurse;
 		}
 		
 		public override void UpdateArmorSet(Player player) {
             player.setBonus = SetBonusText.Value; // This is the setbonus tooltip: 
             player.GetModPlayer<MoreMulticlassModPlayer>().hasDjinnSet = true;
-
+            player.GetModPlayer<MoreMulticlassModPlayer>().DjinnArmorSetProjDmgBonus = SetProjDamageBoost;
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
-        /*
+        
 		public override void AddRecipes() {
-			CreateRecipe().AddIngredient(ItemID.ChumBucket, 10)
-				.AddTile(TileID.Anvils)
+			CreateRecipe().AddIngredient(ItemID.SoulofNight, 8)
+				.AddTile(TileID.MythrilAnvil)
 				.Register();
 		}
-        */
+        
 	}
 }

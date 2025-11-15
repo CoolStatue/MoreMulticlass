@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoreMulticlass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a9340a7afc622758e2825badd7fe0c82b2c3fc1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6f83abe1fbe7fa1942ec1aaee5571d24075e2a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoreMulticlass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoreMulticlass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,6 +15,7 @@ namespace MoreMulticlass.Content.Players
         public bool hasWyvernSet;
         public bool hasNanomachineSet;
         public bool hasDjinnSet;
+        public int DjinnArmorSetProjDmgBonus = 0;
         public int NanomachineMeleeProjectileCooldown = 0;
         public bool summonsApplyMarked;
         private bool dashing;
@@ -33,6 +34,7 @@ namespace MoreMulticlass.Content.Players
             summonsApplyMarked = false;
             hasNanomachineSet = false;
             hasDjinnSet = false;
+            DjinnArmorSetProjDmgBonus = 0;
             if (NanomachineMeleeProjectileCooldown > 0)
             {
                 NanomachineMeleeProjectileCooldown--;

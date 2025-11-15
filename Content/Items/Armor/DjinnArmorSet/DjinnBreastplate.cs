@@ -8,7 +8,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 	// The AutoloadEquip attribute automatically attaches an equip texture to this item.
 	// Providing the EquipType.Body value here will result in TML expecting a X_Body.png file to be placed next to the item's main texture.
 	[AutoloadEquip(EquipType.Body)]
-	public class DJinnBreastplate : ModItem
+	public class DjinnBreastplate : ModItem
 	{
 
 
@@ -34,12 +34,14 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 		
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
-        /*
+        
 		public override void AddRecipes() {
-			CreateRecipe().AddIngredient(ItemID.ChumBucket, 10)
-				.AddTile(TileID.Anvils)
+			CreateRecipe()
+				.AddIngredient(ItemID.SoulofNight, 10)
+				.AddIngredient(ItemID.AncientBattleArmorMaterial, 1) //Forbidden Fragment
+				.AddTile(TileID.MythrilAnvil)
 				.Register();
 		}
-        */
+        
 	}
 }

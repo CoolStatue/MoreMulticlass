@@ -79,6 +79,17 @@ Items: {
 		DisplayName: Nanomachine Helmet
 		Tooltip: ""
 	}
+
+	DjinnHelmet: {
+		SetBonus: Mods.MoreMulticlass.Items.DjinnHelmet.SetBonus
+		DisplayName: Djinn Helmet
+		Tooltip: ""
+	}
+
+	DjinnBreastplate: {
+		DisplayName: Djinn Breastplate
+		Tooltip: ""
+	}
 }
 
 Buffs: {
