@@ -15,21 +15,36 @@ Items: {
 		DisplayName: Chummy Breastplate
 		Tooltip:
 			'''
-			+{0}% Ranged Damage
+			+{0}% ranged Damage
 			+{1} minions
 			+{2} aggro
 			'''
 	}
 
 	ChummyHelmet: {
-		SetBonus: Mods.MoreMulticlass.Items.ChummyHelmet.SetBonus
+		SetBonus:
+			'''
+			+{0}% ranged damage
+			+{2}% summon damage
+			+{1}% ranged crit chance
+			-{3} defense
+			'''
 		DisplayName: Chummy Helmet
-		Tooltip: ""
+		Tooltip:
+			'''
+			+{0}% ranged crit chance
+			+{1} aggro
+			'''
 	}
 
 	ChummyLeggings: {
 		DisplayName: Chummy Leggings
-		Tooltip: ""
+		Tooltip:
+			'''
+			+{0}% movement speed
+			+{1}% summon damage
+			+{2} aggro
+			'''
 	}
 
 	SkeletonVikingHelmet: {
@@ -81,14 +96,19 @@ Items: {
 	}
 
 	DjinnHelmet: {
-		SetBonus: Mods.MoreMulticlass.Items.DjinnHelmet.SetBonus
-		DisplayName: Djinn Helmet
-		Tooltip: ""
+		SetBonus:
+			'''
+			Your Projectiles are empowered and cursed!
+			All Projectiles gain +{0}% Damage
+			All Projectiles gain anti-homing
+			'''
+		DisplayName: Djinn Circlet
+		Tooltip: Accursed Circlet of the Djinn
 	}
 
 	DjinnBreastplate: {
-		DisplayName: Djinn Breastplate
-		Tooltip: ""
+		DisplayName: Djinn Armlets
+		Tooltip: Accursed Armlets of the Djinn
 	}
 }
 
