@@ -48,7 +48,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 		public override void SetDefaults() {
 			Item.width = 18; // Width of the item
 			Item.height = 18; // Height of the item
-			Item.value = Item.sellPrice(gold: 1); // How many coins the item is worth
+			Item.value = Item.sellPrice(silver: 1); // How many coins the item is worth
 			Item.rare = ItemRarityID.Green; // The rarity of the item
 			Item.defense = 2; // The amount of defense the item will give when equipped
 		}
@@ -72,7 +72,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
 		public override void AddRecipes() {
 			CreateRecipe()
-				.AddIngredient(ItemID.ChumBucket, 10)
+				.AddIngredient(ItemID.ChumBucket, 1)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
