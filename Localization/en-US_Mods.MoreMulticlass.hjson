@@ -110,6 +110,11 @@ Items: {
 		DisplayName: Djinn Armlets
 		Tooltip: Accursed Armlets of the Djinn
 	}
+
+	SandstormSummon: {
+		DisplayName: Handy Sandstorm 
+		Tooltip: "Increases Likelihood of Sandstorms occuring"
+	}
 }
 
 Buffs: {
