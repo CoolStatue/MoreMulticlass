@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using MoreMulticlass.Content.Players;
+using MoreMulticlass.Content.Items.Miscellaneous;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
