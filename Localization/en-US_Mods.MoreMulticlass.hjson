@@ -156,6 +156,47 @@ GlobalItems: {
 		DisplayName: Djinn's Curse
 		Tooltip: ""
 	}
+
+	PalladiumLeggingsOverride: {
+		DisplayName: Palladium Leggings
+		Tooltip:
+			'''
+			+{0} max health
+			'''
+	}
+
+	PalladiumBreastplateOverride: {
+		DisplayName: Palladium Breastplate
+		Tooltip:
+			'''
+			+{0} max health
+			+{1} health regen
+			'''
+	}
+
+	PalladiumMaskOverride: {
+		DisplayName: Palladium Mask
+		Tooltip:
+			'''
+			+{0} max health
+			'''
+	}
+
+	PalladiumHelmetOverride: {
+		DisplayName: Palladium Helmet
+		Tooltip:
+			'''
+			+{0} health regen
+			'''
+	}
+
+	PalladiumHeadgearOverride: {
+		DisplayName: Palladium Headgear
+		Tooltip:
+			'''
+			+{0} mana regen
+			'''
+	}
 }
 
 "Keybinds.Armor Set Ability.DisplayName": Armor  Set  Ability

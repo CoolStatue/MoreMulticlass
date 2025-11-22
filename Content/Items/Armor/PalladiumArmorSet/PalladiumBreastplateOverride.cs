@@ -35,6 +35,8 @@ namespace MoreMulticlass.Content.Items.Armor.PalladiumArmorSet
                 string.Format(tooltipText, MaxHealthIncrease, HPRegenIncrease)));
         }
 
+       
+
 
     }
 }

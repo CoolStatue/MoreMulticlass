@@ -13,7 +13,7 @@ namespace MoreMulticlass.Content.Items.Armor.PalladiumArmorSet
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
             => entity.type == ItemID.PalladiumMask;
 
-         public static readonly int MaxHealthIncrease = 40;
+        public static readonly int MaxHealthIncrease = 40;
 
         public override void SetDefaults(Item item)
         {
