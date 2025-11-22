@@ -151,6 +151,11 @@ GlobalItems: {
 			+{1}% ranged crit chance
 			'''
 	}
+
+	DjinnsCurseOverride: {
+		DisplayName: Djinn's Curse
+		Tooltip: ""
+	}
 }
 
 "Keybinds.Armor Set Ability.DisplayName": Armor  Set  Ability

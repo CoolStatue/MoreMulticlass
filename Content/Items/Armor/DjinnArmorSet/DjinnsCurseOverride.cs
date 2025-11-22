@@ -17,7 +17,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.ItemTooltips.PirateShirtOverride");
+            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.DjinnsCurseOverride.Tooltip");
 
             tooltips.Add(new TooltipLine(Mod, "Buffed",
                 string.Format(tooltipText)));
@@ -26,6 +26,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
         public override void SetDefaults(Item item)
         {
             item.defense = 8;
+            item.vanity = false;
         }
 
         public override void UpdateEquip(Item item, Player player)
