@@ -112,8 +112,13 @@ Items: {
 	}
 
 	SandstormSummon: {
-		DisplayName: Handy Sandstorm 
-		Tooltip: "Increases Likelihood of Sandstorms occuring"
+		DisplayName: Handy Sandstorm
+		Tooltip: Increases Likelihood of Sandstorms occuring
+	}
+
+	HopliteArmorShard: {
+		Tooltip: ""
+		DisplayName: Gladiator Armor Shard
 	}
 }
 
