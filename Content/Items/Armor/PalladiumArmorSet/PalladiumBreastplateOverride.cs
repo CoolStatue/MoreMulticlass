@@ -10,6 +10,11 @@ namespace MoreMulticlass.Content.Items.Armor.PalladiumArmorSet
 {
     public class PalladiumBreastplateOverride : GlobalItem
     {
-        
+
+        public override bool AppliesToEntity(Item entity, bool lateInstantiation)
+            => entity.type == ItemID.PalladiumBreastplate; 
+        public static readonly int MaxHealthIncrease = 40;
+
+
     }
 }

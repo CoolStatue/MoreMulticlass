@@ -10,6 +10,7 @@ namespace MoreMulticlass.Content.Items.Armor.PalladiumArmorSet
 {
     public class PalladiumLeggingsOverride : GlobalItem
     {
-        
+        public override bool AppliesToEntity(Item entity, bool lateInstantiation)
+            => entity.type == ItemID.PalladiumLeggings; 
     }
 }
