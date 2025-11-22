@@ -19,16 +19,19 @@ namespace MoreMulticlass.ModSystems
             Recipe recipe = Recipe.Create(ItemID.GladiatorLeggings, 1);
             recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 16);
             recipe.AddIngredient(ModContent.ItemType<HopliteArmorShard>(), 6);
+            recipe.AddTile(TileID.Anvils);
             recipe.Register();
 
             recipe = Recipe.Create(ItemID.GladiatorBreastplate, 1);
             recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 20);
             recipe.AddIngredient(ModContent.ItemType<HopliteArmorShard>(), 9);
+            recipe.AddTile(TileID.Anvils);
             recipe.Register();
             
             recipe = Recipe.Create(ItemID.GladiatorHelmet, 1);
             recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 14);
             recipe.AddIngredient(ModContent.ItemType<HopliteArmorShard>(), 5);
+            recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
 
