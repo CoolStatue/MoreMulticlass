@@ -20,7 +20,7 @@ namespace MoreMulticlass.Content.Items.Armor.PirateArmorSet
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.ItemTooltips.PirateShirtOverride");
+            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.PirateShirtOverride.Tooltip");
 
             tooltips.Add(new TooltipLine(Mod, "Buffed",
                 string.Format(tooltipText, MaxMinionIncrease, RangedDmgIncrease)));
@@ -29,6 +29,7 @@ namespace MoreMulticlass.Content.Items.Armor.PirateArmorSet
         public override void SetDefaults(Item item)
         {
             item.defense = 14;
+            item.vanity = false;
         }
 
         public override void UpdateEquip(Item item, Player player)

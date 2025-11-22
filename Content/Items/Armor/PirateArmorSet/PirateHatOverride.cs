@@ -15,21 +15,22 @@ namespace MoreMulticlass.Content.Items.Armor.PirateArmorSet
 
         
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
-            => entity.type == ItemID.PirateHat;
+            => entity.type == ItemID.PirateHat; 
 
 
-
+        
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.ItemTooltips.PirateHatOverride");
+            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.PirateHatOverride.Tooltip");
 
-            tooltips.Add(new TooltipLine(Mod, "Buffed",
+            tooltips.Add(new TooltipLine(Mod, "PirateHatOverride",
                 string.Format(tooltipText, SummonDamageIncrease, RangedCritIncrease)));
         }
 
         public override void SetDefaults(Item item)
         {
             item.defense = 3;
+            item.vanity = false;
         }
 
         public override void UpdateEquip(Item item, Player player)

@@ -124,5 +124,34 @@ Buffs: {
 	}
 }
 
+GlobalItems: {
+	PirateHatOverride: {
+		DisplayName: Pirate Hat
+		Tooltip:
+			'''
+			+{0} max minion
+			+{1}% ranged damage
+			'''
+	}
+
+	PiratePantsOverride: {
+		DisplayName: Pirate Hat
+		Tooltip:
+			'''
+			+{0} max minions
+			+{1}% move speed
+			'''
+	}
+
+	PirateShirtOverride: {
+		DisplayName: Pirate Hat
+		Tooltip:
+			'''
+			+{0}% summon damage
+			+{1}% ranged crit chance
+			'''
+	}
+}
+
 "Keybinds.Armor Set Ability.DisplayName": Armor  Set  Ability
 Projectiles.NanomachineSetMeleeProjectile.DisplayName: Nanomachine Set Melee Projectile
