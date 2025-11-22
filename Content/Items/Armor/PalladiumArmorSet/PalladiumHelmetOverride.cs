@@ -12,5 +12,28 @@ namespace MoreMulticlass.Content.Items.Armor.PalladiumArmorSet
     {
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
             => entity.type == ItemID.PalladiumHelmet; 
+
+        
+        public static readonly int HPRegenIncrease = 1;
+
+        public override void SetDefaults(Item item)
+        {
+            item.defense = 6;
+        }
+
+        public override void UpdateEquip(Item item, Player player)
+        {
+            player.lifeRegen += HPRegenIncrease;
+        }
+
+        public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        {
+            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.PalladiumHelmetOverride.Tooltip");
+
+            tooltips.Add(new TooltipLine(Mod, "Buffed",
+                string.Format(tooltipText, HPRegenIncrease)));
+        }
     }
+
+    
 }
