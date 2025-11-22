@@ -27,7 +27,7 @@ namespace MoreMulticlass.Content.Items.Armor.PalladiumArmorSet
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.PalladiumBreastplateOverride.Tooltip");
+            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.PalladiumLeggingsOverride.Tooltip");
 
             tooltips.Add(new TooltipLine(Mod, "Buffed",
                 string.Format(tooltipText, MaxHealthIncrease)));
