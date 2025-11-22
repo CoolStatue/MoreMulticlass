@@ -1,16 +1,6 @@
 # This file will automatically update with entries for new content after a build and reload.
 
 Items: {
-	BasicSword: {
-		DisplayName: Basic Sword
-		Tooltip:
-			'''
-			Tooltip: My first sword
-			Replacing this tooltip is duty 
-			It's snowing on Mt.Fuji
-			'''
-	}
-
 	ChummyBreastplate: {
 		DisplayName: Chummy Breastplate
 		Tooltip:
