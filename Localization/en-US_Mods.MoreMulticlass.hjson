@@ -159,10 +159,7 @@ GlobalItems: {
 
 	PalladiumLeggingsOverride: {
 		DisplayName: Palladium Leggings
-		Tooltip:
-			'''
-			+{0} max health
-			'''
+		Tooltip: +{0} max health
 	}
 
 	PalladiumBreastplateOverride: {
@@ -176,26 +173,17 @@ GlobalItems: {
 
 	PalladiumMaskOverride: {
 		DisplayName: Palladium Mask
-		Tooltip:
-			'''
-			+{0} max health
-			'''
+		Tooltip: +{0} max health
 	}
 
 	PalladiumHelmetOverride: {
 		DisplayName: Palladium Helmet
-		Tooltip:
-			'''
-			+{0} health regen
-			'''
+		Tooltip: +{0} health regen
 	}
 
 	PalladiumHeadgearOverride: {
 		DisplayName: Palladium Headgear
-		Tooltip:
-			'''
-			+{0} mana regen
-			'''
+		Tooltip: +{0} mana regen
 	}
 }
 

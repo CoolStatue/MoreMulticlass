@@ -14,7 +14,7 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 
         
 
-		public static LocalizedText SetBonusText { get; private set; }
+		// public static LocalizedText SetBonusText { get; private set; }
 
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
         {
@@ -37,28 +37,37 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
         }
 
         public override string IsArmorSet(Item head, Item body, Item legs)
-        {
-            if (body.type == ModContent.ItemType<SkeletonVikingBreastplate>()
+        {   
+            if (head.type == ItemID.VikingHelmet
+                && body.type == ModContent.ItemType<SkeletonVikingBreastplate>()
                 && legs.type == ModContent.ItemType<SkeletonVikingLeggings>())
             {
-                return "Skeleton Viking Set";
+                
+                return "skeleton viking set";
             }
             return "";
         }
         
         public override void UpdateArmorSet(Player player, string str)
         {
-            if (str == "Skeleton Viking Set")
+            
+            if (str == "skeleton viking set")
             {
-                player.setBonus = SetBonusText.Value; // This is the setbonus tooltip: "Increases dealt damage by 20%"
+                
+                // player.setBonus = SetBonusText.Value; // This is the setbonus tooltip: "Increases dealt damage by 20%"
                 // player.statLifeMax2 += 400; // TODO MAKE THE ACTUAL SET BONUS
-
+                
+                
                 if (player.statLife < player.statLifeMax2 * 0.25f)
                 {
+                    
                     player.AddBuff(ModContent.BuffType<BerserkerRage>(), 2);
+                   
                 }
+                
             }
         }
+        
         
 
     }

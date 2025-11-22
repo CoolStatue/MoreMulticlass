@@ -12,9 +12,9 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 	{
 		public static readonly int MoveSpeedBonus = 5;
 		public static readonly int MeleeCritBonus = 5;
-		public static readonly int AggroIncrease = 250;
+		
 
-		public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MoveSpeedBonus, MeleeCritBonus, AggroIncrease);
+		public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MoveSpeedBonus, MeleeCritBonus);
 
 		public override void SetDefaults() {
 			Item.width = 18; // Width of the item
@@ -28,7 +28,7 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 		{
 			player.moveSpeed += MoveSpeedBonus / 100f; // Increase the movement speed of the player
 			player.GetCritChance(DamageClass.Melee) += MeleeCritBonus / 100f;
-			player.aggro += AggroIncrease; // Increases player's aggro
+			
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
