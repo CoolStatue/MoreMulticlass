@@ -1,3 +1,4 @@
+using MoreMulticlass.Content.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -38,7 +39,7 @@ namespace MoreMulticlass.Content.Items.Armor.VenomArmor
 
         public override void UpdateEquip(Player player)
         {
-            
+            player.GetModPlayer<MoreMulticlassModPlayer>().hasVenomMask = true;
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
@@ -51,7 +52,7 @@ namespace MoreMulticlass.Content.Items.Armor.VenomArmor
         public override void UpdateArmorSet(Player player)
         {
             player.maxMinions += SetBonusMaxMinionIncrease;
-
+            player.GetModPlayer<MoreMulticlassModPlayer>().hasVenomSet = true;
             // TODO add more of the set bonus
         }
 
