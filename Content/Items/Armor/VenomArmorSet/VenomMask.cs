@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace MoreMulticlass.Content.Items.Armor.VenomArmor
+namespace MoreMulticlass.Content.Items.Armor.VenomArmorSet
 {
     [AutoloadEquip(EquipType.Head)]
     public class VenomMask : ModItem
