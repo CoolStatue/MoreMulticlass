@@ -34,6 +34,13 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 		public override void AddRecipes() {
 			CreateRecipe()
 				.AddIngredient(ItemID.ChumBucket, 1)
+				.AddIngredient(ItemID.TinGreaves, 1)
+				.AddTile(TileID.Anvils)
+				.Register();
+			
+			CreateRecipe()
+				.AddIngredient(ItemID.ChumBucket, 1)
+				.AddIngredient(ItemID.CopperGreaves, 1)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}

@@ -36,7 +36,15 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
 		public override void AddRecipes() {
-			CreateRecipe().AddIngredient(ItemID.ChumBucket, 2)
+			CreateRecipe()
+				.AddIngredient(ItemID.ChumBucket, 2)
+				.AddIngredient(ItemID.TinChainmail, 1)
+				.AddTile(TileID.Anvils)
+				.Register();
+			
+			CreateRecipe()
+				.AddIngredient(ItemID.ChumBucket, 2)
+				.AddIngredient(ItemID.CopperChainmail, 1)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
