@@ -3,11 +3,10 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using MoreMulticlass.Content.Items.Armor.VenomArmor;
+using MoreMulticlass.Content.Items.Armor.VenomArmorSet;
 using MoreMulticlass.Content.Players;
 
-namespace MoreMulticlass.Content.Items.Armor.VenomArmor
-{
+
     public class VenomMaskDartBonuses : GlobalProjectile
     {
         public override void OnSpawn(Projectile projectile, IEntitySource source)
@@ -38,4 +37,3 @@ namespace MoreMulticlass.Content.Items.Armor.VenomArmor
             return false;
         }
     }
-}
