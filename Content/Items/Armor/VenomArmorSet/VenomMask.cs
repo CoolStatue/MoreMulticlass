@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 
 namespace MoreMulticlass.Content.Items.Armor.VenomArmor
 {
+    [AutoloadEquip(EquipType.Head)]
     public class VenomMask : ModItem
     {
         public static readonly int DartDamageIncrease = 35; 

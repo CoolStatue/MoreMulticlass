@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace MoreMulticlass.Content.Items.Armor.VenomArmor
 {
+    [AutoloadEquip(EquipType.Legs)]
     public class VenomPants : ModItem
     {
         public static readonly int MaxMinionIncrease = 1;
