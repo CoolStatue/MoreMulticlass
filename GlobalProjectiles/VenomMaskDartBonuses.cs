@@ -21,7 +21,7 @@ using MoreMulticlass.Content.Players;
             if (modPlayer.hasVenomMask && IsDart(projectile))
             {
                 projectile.CritChance += VenomMask.DartCritIncrease;
-                projectile.damage = (int)((1f + (VenomMask.DartDamageIncrease / 100f)) * projectile.damage);
+                projectile.damage = (int)(((100 + VenomMask.DartDamageIncrease) / 100f) * projectile.damage);
             }
             
         }
@@ -30,7 +30,9 @@ using MoreMulticlass.Content.Players;
         {
             if (projectile.type == ProjectileID.IchorDart
                 || projectile.type == ProjectileID.CursedDart
-                || projectile.type == ProjectileID.CrystalDart) 
+                || projectile.type == ProjectileID.CrystalDart
+                || projectile.type == ProjectileID.PoisonDartBlowgun
+                || projectile.type == ProjectileID.Seed) 
             {
                 return true;
             }
