@@ -110,6 +110,27 @@ Items: {
 		Tooltip: ""
 		DisplayName: Gladiator Armor Shard
 	}
+
+	VenomMask: {
+		SetBonus: Mods.MoreMulticlass.Items.VenomMask.SetBonus
+		DisplayName: Venom Mask
+		Tooltip: ""
+	}
+
+	VenomPants: {
+		DisplayName: Venom Pants
+		Tooltip: ""
+	}
+
+	VenomShirt: {
+		DisplayName: Venom Shirt
+		Tooltip: ""
+	}
+
+	VikingArmorShard: {
+		DisplayName: Viking Armor Shard
+		Tooltip: ""
+	}
 }
 
 Buffs: {
