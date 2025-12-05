@@ -1,3 +1,5 @@
+//This entire class is obsoleted
+/*
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -69,3 +71,4 @@ public class DjinnAntiHoming : GlobalProjectile
         
     }
 }
+*/
