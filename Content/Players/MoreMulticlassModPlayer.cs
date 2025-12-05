@@ -15,6 +15,7 @@ namespace MoreMulticlass.Content.Players
         public bool hasWyvernSet;
         public bool hasNanomachineSet;
         public bool hasDjinnSet;
+        public bool hasDjinnsCurse;
         public bool hasVenomMask;
         public bool hasVenomSet;
         public int DjinnArmorSetProjDmgBonus = 0;
@@ -37,6 +38,7 @@ namespace MoreMulticlass.Content.Players
             summonsApplyMarked = false;
             hasNanomachineSet = false;
             hasDjinnSet = false;
+            hasDjinnsCurse = false;
             hasVenomMask = false;
             hasVenomSet = false;
             DjinnArmorSetProjDmgBonus = 0;
@@ -129,6 +131,21 @@ namespace MoreMulticlass.Content.Players
 
             // Combine checks
             return (onSolidTile && velocityStill) || isHooked || onMount || onTrack;
+        }
+
+        public override void PostUpdateEquips()
+        {
+            if (Player.GetModPlayer<MoreMulticlassModPlayer>().hasDjinnsCurse)
+            {
+                if (Player.HasBuff(BuffID.Featherfall))
+                {
+                    
+                }
+                else
+                {
+                    Player.slowFall = false;
+                }
+            }   
         }
 
     }

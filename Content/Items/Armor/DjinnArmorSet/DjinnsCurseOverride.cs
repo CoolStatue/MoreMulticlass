@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using MoreMulticlass.Content.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -31,7 +32,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 
         public override void UpdateEquip(Item item, Player player)
         {
-
+            player.GetModPlayer<MoreMulticlassModPlayer>().hasDjinnsCurse = true;
 
         }
 
