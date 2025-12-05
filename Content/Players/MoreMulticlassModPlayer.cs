@@ -66,7 +66,13 @@ namespace MoreMulticlass.Content.Players
                 && !Player.HasBuff(ModContent.BuffType<Accursed>())) 
             {
                 Player.statLife = Math.Max(Player.statLife / 2, 1);
-                Player.HealEffect(0);               // forces UI refresh (value doesn't matter)
+                // Player.HealEffect(0);              
+                CombatText.NewText(
+                    Player.Hitbox,
+                    color: Color.Red,
+                    text: "Accursed!",
+                    dramatic: true
+                );
                 SoundEngine.PlaySound(SoundID.Item171);
                 Player.AddBuff(ModContent.BuffType<Accursed>(), 10 * 60); // Accursed for 10 seconds
 

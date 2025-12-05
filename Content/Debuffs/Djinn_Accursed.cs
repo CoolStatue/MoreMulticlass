@@ -31,7 +31,7 @@ namespace MoreMulticlass.Content.Debuffs
         public override void Update(Player player, ref int buffIndex)
         {
             //TODO add particles
-            int dust = Dust.NewDust(player.position, player.width, player.height, DustID.Cloud , 0, 0, 0, Color.Purple);
+            int dust = Dust.NewDust(player.position, player.width, player.height, DustID.Cloud , 0, 0, 0, Color.DarkRed);
             Main.dust[dust].noGravity = true;
             player.GetDamage(DamageClass.Generic) += DjinnHelmet.SetProjDamageBoost / 100f ;
             
