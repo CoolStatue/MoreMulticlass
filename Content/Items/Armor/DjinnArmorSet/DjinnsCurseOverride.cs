@@ -40,6 +40,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
             Recipe.Create(ItemID.DjinnsCurse, 1)
                 .AddIngredient(ItemID.SoulofNight, 8)
                 .AddIngredient(ItemID.SoulofFlight, 8)
+                .AddIngredient(ItemID.DarkShard, 1)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }

@@ -60,7 +60,9 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
         
 		public override void AddRecipes() {
-			CreateRecipe().AddIngredient(ItemID.SoulofNight, 8)
+			CreateRecipe()
+				.AddIngredient(ItemID.SoulofNight, 8)
+				.AddIngredient(ItemID.DarkShard, 1)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();
 		}
