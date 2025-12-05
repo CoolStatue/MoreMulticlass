@@ -1,5 +1,6 @@
 ﻿using System;
 using Humanizer;
+using Steamworks;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -74,18 +75,21 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 			CreateRecipe()
 				.AddIngredient(ItemID.ChumBucket, 1)
 				.AddIngredient(ItemID.TinHelmet, 1)
+				.AddIngredient(ItemID.Bone, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
 			
 			CreateRecipe()
 				.AddIngredient(ItemID.ChumBucket, 1)
 				.AddIngredient(ItemID.CopperHelmet, 1)
+				.AddIngredient(ItemID.Bone, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
 
 			CreateRecipe()
 				.AddIngredient(ItemID.ChumBucket, 1)
 				.AddIngredient(ItemID.EmptyBucket, 1)
+				.AddIngredient(ItemID.Bone, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}

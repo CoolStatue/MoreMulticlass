@@ -39,12 +39,14 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 			CreateRecipe()
 				.AddIngredient(ItemID.ChumBucket, 2)
 				.AddIngredient(ItemID.TinChainmail, 1)
+				.AddIngredient(ItemID.Bone, 10)
 				.AddTile(TileID.Anvils)
 				.Register();
 			
 			CreateRecipe()
 				.AddIngredient(ItemID.ChumBucket, 2)
 				.AddIngredient(ItemID.CopperChainmail, 1)
+				.AddIngredient(ItemID.Bone, 10)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
