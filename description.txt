@@ -1,1 +1,4 @@
-Modify this file with a description of your mod.
+(NOTE: Mod is currently in beta, not all planned content has been added. Multiplayer may be buggy (Please help by reporting any bugs you encounter))
+Ever wished there were more multiclass armor options in Terraria? Sick of waiting for Sandstorms to be able to get Forbidden armor? Wished Hardmode Ore Armors were more interesting? 
+
+More Multiclass aims to add more options for playing multiclass, with a focus on interesting armor abilities that encourage novel play styles. 
