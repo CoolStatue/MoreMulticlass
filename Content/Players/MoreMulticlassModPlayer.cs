@@ -7,6 +7,7 @@ using Terraria.GameInput;
 using MoreMulticlass;
 using Microsoft.Build.Tasks;
 using System;
+using MoreMulticlass.Content.Debuffs;
 
 namespace MoreMulticlass.Content.Players
 {
@@ -59,6 +60,18 @@ namespace MoreMulticlass.Content.Players
                 MoreMulticlass.ArmorSetAbility.JustPressed && touchedGround)
             {
                 PerformDiagonalDash();
+            }
+
+            if (hasDjinnSet && MoreMulticlass.ArmorSetAbility.JustPressed 
+                && !Player.HasBuff(ModContent.BuffType<Accursed>())) 
+            {
+                Player.statLife = Math.Max(Player.statLife / 2, 1);
+                Player.HealEffect(0);               // forces UI refresh (value doesn't matter)
+                SoundEngine.PlaySound(SoundID.Item171);
+                Player.AddBuff(ModContent.BuffType<Accursed>(), 10 * 60); // Accursed for 10 seconds
+
+                
+                
             }
         }
 

@@ -19,7 +19,7 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
         
         public static LocalizedText SetBonusText { get; private set; }
 
-        public static readonly int SetProjDamageBoost = 50;
+        public static readonly int SetProjDamageBoost = 50; // no longer projectile exclusive
 		public override void SetStaticDefaults()
 		{
 			// If your head equipment should draw hair while drawn, use one of the following:
