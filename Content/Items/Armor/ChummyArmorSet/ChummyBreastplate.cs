@@ -11,7 +11,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 	public class ChummyBreastplate : ModItem
 	{
 		public static readonly int MaxMinionIncrease = 1;
-		public static readonly int RangedDamageIncrease = 2;
+		public static readonly int RangedDamageIncrease = 8;
 		public static readonly int AggroIncrease = 250;
 
 		public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(RangedDamageIncrease, MaxMinionIncrease, AggroIncrease);
@@ -21,7 +21,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 			Item.height = 18; // Height of the item
 			Item.value = Item.sellPrice(silver: 1); // How many coins the item is worth
 			Item.rare = ItemRarityID.Green; // The rarity of the item
-			Item.defense = 3; // The amount of defense the item will give when equipped
+			Item.defense = 6; // The amount of defense the item will give when equipped
 		}
 
 		public override void UpdateEquip(Player player)

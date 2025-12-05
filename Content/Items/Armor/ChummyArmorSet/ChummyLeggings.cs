@@ -11,7 +11,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 	public class ChummyLeggings : ModItem
 	{
 		public static readonly int MoveSpeedBonus = 5;
-		public static readonly int SummonDamageBonus = 3;
+		public static readonly int SummonDamageBonus = 8;
 		public static readonly int AggroIncrease = 250;
 
 		public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MoveSpeedBonus, SummonDamageBonus, AggroIncrease);
@@ -21,7 +21,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 			Item.height = 18; // Height of the item
 			Item.value = Item.sellPrice(silver: 1); // How many coins the item is worth
 			Item.rare = ItemRarityID.Green; // The rarity of the item
-			Item.defense = 2; // The amount of defense the item will give when equipped
+			Item.defense = 6; // The amount of defense the item will give when equipped
 		}
 
 		public override void UpdateEquip(Player player) {

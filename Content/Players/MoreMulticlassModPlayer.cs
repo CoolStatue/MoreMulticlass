@@ -13,6 +13,8 @@ namespace MoreMulticlass.Content.Players
     public class MoreMulticlassModPlayer : ModPlayer
     {
         public bool hasWyvernSet;
+        public bool hasChummySet;
+        public int ChummyArmorSetDRPenalty;
         public bool hasNanomachineSet;
         public bool hasDjinnSet;
         public bool hasDjinnsCurse;
@@ -34,6 +36,8 @@ namespace MoreMulticlass.Content.Players
 
         public override void ResetEffects()
         {
+            hasChummySet = false;
+            ChummyArmorSetDRPenalty = 0;
             hasWyvernSet = false;
             summonsApplyMarked = false;
             hasNanomachineSet = false;
@@ -146,6 +150,20 @@ namespace MoreMulticlass.Content.Players
                     Player.slowFall = false;
                 }
             }   
+        }
+
+        public override void OnHurt(Player.HurtInfo info)
+        {
+            if (Player.GetModPlayer<MoreMulticlassModPlayer>().hasChummySet)
+            {
+                
+                info.Damage = (int)(info.Damage * 
+                    (
+                        (100 + Player.GetModPlayer<MoreMulticlassModPlayer>().ChummyArmorSetDRPenalty) 
+                        / 100f
+                    )
+                );
+            }
         }
 
     }

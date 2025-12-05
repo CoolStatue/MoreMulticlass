@@ -1,5 +1,6 @@
 ﻿using System;
 using Humanizer;
+using MoreMulticlass.Content.Players;
 using Steamworks;
 using Terraria;
 using Terraria.ID;
@@ -18,10 +19,11 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 		public static readonly int AggroIncrease = 250;
 
 		//ForSetBonus
-		public static readonly int SetBonusRangedDamageBonus = 20;
-		public static readonly int SetBonusSummonDamageBonus = 15;
-		public static readonly int SetBonusRangedCritBonus = 5;
-		public static readonly int SetBonusDefensePenalty = 3;
+		public static readonly int SetBonusRangedDamageBonus = 5;
+		public static readonly int SetBonusSummonDamageBonus = 5;
+		public static readonly int SetBonusRangedCritBonus = 0;
+		public static readonly int SetBonusDefensePenalty = 0; //TODO: Change to DR
+		public static readonly int SetBonusDRPenalty = 10;
 
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(RangedCritBonus, AggroIncrease);
 
@@ -35,7 +37,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 			// ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true; // Draw all hair as normal. Used by Mime Mask, Sunglasses
 			// ArmorIDs.Head.Sets.DrawsBackHairWithoutHeadgear[Item.headSlot] = true;
 
-			SetBonusText = this.GetLocalization("SetBonus").WithFormatArgs(SetBonusRangedDamageBonus, SetBonusRangedCritBonus, SetBonusSummonDamageBonus, SetBonusDefensePenalty);
+			SetBonusText = this.GetLocalization("SetBonus").WithFormatArgs(SetBonusRangedDamageBonus, SetBonusRangedCritBonus, SetBonusSummonDamageBonus, SetBonusDefensePenalty, SetBonusDRPenalty);
 		}
 
         public override void UpdateEquip(Player player)
@@ -51,7 +53,7 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 			Item.height = 18; // Height of the item
 			Item.value = Item.sellPrice(silver: 1); // How many coins the item is worth
 			Item.rare = ItemRarityID.Green; // The rarity of the item
-			Item.defense = 2; // The amount of defense the item will give when equipped
+			Item.defense = 6; // The amount of defense the item will give when equipped
 		}
 
 		// IsArmorSet determines what armor pieces are needed for the setbonus to take effect
@@ -63,11 +65,12 @@ namespace MoreMulticlass.Content.Items.Armor.ChummyArmorSet
 		// UpdateArmorSet allows you to give set bonuses to the armor.
 		public override void UpdateArmorSet(Player player) {
 			player.setBonus = SetBonusText.Value; // This is the setbonus tooltip: "Increases dealt damage by 20%"
-
+			player.GetModPlayer<MoreMulticlassModPlayer>().hasChummySet = true;
 			player.GetDamage(DamageClass.Ranged) += SetBonusRangedDamageBonus / 100f; // Increase Ranged dmg
 			player.GetCritChance(DamageClass.Ranged) += SetBonusRangedCritBonus / 100f; // Increase RAnged crit chance
 			player.GetDamage(DamageClass.Summon) += SetBonusSummonDamageBonus / 100f;
 			player.statDefense -= SetBonusDefensePenalty;
+			player.GetModPlayer<MoreMulticlassModPlayer>().ChummyArmorSetDRPenalty = SetBonusDRPenalty;
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
