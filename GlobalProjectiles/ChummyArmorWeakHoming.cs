@@ -56,8 +56,8 @@ public class ChummyArmorWeakHoming : GlobalProjectile
 
         
 
-        float homingRange = 500f;
-        float homingStrength = 0.05f;
+        float homingRange = 100f;
+        float homingStrength = 0.1f;
 
         NPC target = projectile.FindTargetWithinRange(homingRange);
         
