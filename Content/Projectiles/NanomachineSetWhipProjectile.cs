@@ -30,6 +30,10 @@ namespace MoreMulticlass.Content.Projectiles
 
         public override void AI()
         {
+            if (Main.myPlayer != Projectile.owner)
+            {
+                return;
+            }
             
             float gravity = 0.3f;
             // projectile accelerates
