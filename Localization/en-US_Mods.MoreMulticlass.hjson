@@ -143,6 +143,11 @@ Buffs: {
 		DisplayName: Marked
 		Description: Mods.MoreMulticlass.Buffs.Marked.Description
 	}
+
+	Accursed: {
+		Description: Mods.MoreMulticlass.Buffs.Accursed.Description
+		DisplayName: Accursed
+	}
 }
 
 GlobalItems: {
@@ -209,4 +214,8 @@ GlobalItems: {
 }
 
 "Keybinds.Armor Set Ability.DisplayName": Armor  Set  Ability
-Projectiles.NanomachineSetMeleeProjectile.DisplayName: Nanomachine Set Melee Projectile
+
+Projectiles: {
+	NanomachineSetMeleeProjectile.DisplayName: Nanomachine Set Melee Projectile
+	NanomachineSetWhipProjectile.DisplayName: Nanomachine Set Whip Projectile
+}
