@@ -17,7 +17,7 @@ Items: {
 			+{0}% ranged damage
 			+{2}% summon damage
 			+{1}% ranged crit chance
-			-{3} defense
+			+{4}% damage taken
 			'''
 		DisplayName: Chummy Helmet
 		Tooltip:
@@ -45,18 +45,28 @@ Items: {
 
 	SkeletonVikingBreastplate: {
 		DisplayName: Skeleton Viking Breastplate
-		Tooltip: ""
+		Tooltip: 
+			'''
+			+{0}% melee damage
+			'''
 	}
 
 	SkeletonVikingLeggings: {
 		DisplayName: Skeleton Viking Leggings
-		Tooltip: ""
+		Tooltip: 
+			'''
+			+{0}% movement speed
+			+{1}% melee crit chance
+			'''
 	}
 
 	WyvernHelmet: {
 		SetBonus: Mods.MoreMulticlass.Items.WyvernHelmet.SetBonus
 		DisplayName: Wyvern Helmet
-		Tooltip: ""
+		Tooltip: 
+			'''
+			
+			'''
 	}
 
 	WyvernBreastplate: {
