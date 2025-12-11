@@ -61,22 +61,34 @@ Items: {
 	}
 
 	WyvernHelmet: {
-		SetBonus: Mods.MoreMulticlass.Items.WyvernHelmet.SetBonus
+		SetBonus: 
+			'''
+			Perform a Diagonal Wyvern Dash with <Set Bonus Keybind>
+			'''
 		DisplayName: Wyvern Helmet
 		Tooltip: 
 			'''
-			
+			+{0}% movement speed
+			+{1} max mana
 			'''
 	}
 
 	WyvernBreastplate: {
 		DisplayName: Wyvern Breastplate
-		Tooltip: ""
+		Tooltip: 
+		'''
+		+{0}% movement speed
+		+{1} max minion
+		'''
 	}
 
 	WyvernLeggings: {
 		DisplayName: Wyvern Leggings
-		Tooltip: ""
+		Tooltip: 
+			'''
+			+{0}% movement speed
+			+{1}% damage
+			'''
 	}
 
 	NanomachineBreastplate: {
