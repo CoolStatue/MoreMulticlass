@@ -6,6 +6,8 @@ using MoreMulticlass.Content.Players;
 using Microsoft.Xna.Framework;
 using MoreMulticlass.Content.Projectiles;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using Terraria.Audio;
 
 
 public class SlashGlobalItem : GlobalItem
@@ -27,6 +29,7 @@ public class SlashGlobalItem : GlobalItem
                 // && player.itemAnimation == player.itemAnimationMax - 1 
                 )
             {
+                SoundEngine.PlaySound(SoundID.Item71, player.position);
                 modPlayer.NanomachineMeleeProjectileCooldown = 20;
                 Vector2 velocity = player.DirectionTo(Main.MouseWorld) * 10f;
                 Projectile.NewProjectile(
