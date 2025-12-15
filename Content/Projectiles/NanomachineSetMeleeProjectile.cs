@@ -9,8 +9,8 @@ namespace MoreMulticlass.Content.Projectiles
     {
         public override void SetDefaults()
         {
-            Projectile.width = 64;
-            Projectile.height = 64;
+            Projectile.width = 64 * 4 + 32;
+            Projectile.height = 64 * 4 + 32;
             Projectile.friendly = true;
             Projectile.penetrate = -1;
             Projectile.tileCollide = false;
@@ -22,7 +22,8 @@ namespace MoreMulticlass.Content.Projectiles
         public override void AI()
         {
             // Rotate to face velocity direction
-            Projectile.rotation = Projectile.velocity.ToRotation();
+            Projectile.rotation = // Projectile.velocity.ToRotation();
+            Main.player[Projectile.owner].DirectionTo(Main.MouseWorld).ToRotation();
 
             Projectile.velocity = new Microsoft.Xna.Framework.Vector2(0f);
 

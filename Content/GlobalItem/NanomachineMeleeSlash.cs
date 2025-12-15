@@ -5,6 +5,7 @@ using Terraria.Localization;
 using MoreMulticlass.Content.Players;
 using Microsoft.Xna.Framework;
 using MoreMulticlass.Content.Projectiles;
+using Microsoft.Xna.Framework.Input;
 
 
 public class SlashGlobalItem : GlobalItem
@@ -30,10 +31,10 @@ public class SlashGlobalItem : GlobalItem
                 Vector2 velocity = player.DirectionTo(Main.MouseWorld) * 10f;
                 Projectile.NewProjectile(
                     player.GetSource_ItemUse(item),
-                    player.Center + new Vector2(player.direction, 0f) * 40f,
+                    player.Center + player.DirectionTo(Main.MouseWorld).SafeNormalize(Vector2.One) * 80f,
                     velocity,
                     ModContent.ProjectileType<NanomachineSetMeleeProjectile>(),
-                    (int)(item.damage * 1.2f),
+                    (int)(item.damage * 0.2f),
                     item.knockBack,
                     player.whoAmI
                 );
