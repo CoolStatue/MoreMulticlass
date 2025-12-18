@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using MoreMulticlass.Content.Buffs;
+using MoreMulticlass.Content.Items.Miscellaneous;
 
 namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 {
@@ -71,13 +72,21 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
-		/*
 		public override void AddRecipes() {
 			CreateRecipe()
-				.AddIngredient(ItemID.ChumBucket, 10)
+				.AddIngredient(ModContent.ItemType<VikingArmorShard>(), 2)
+				.AddIngredient(ItemID.IronBar, 10)
+				.AddTile(TileID.Anvils)
+				.Register();
+
+			CreateRecipe()
+				.AddIngredient(ModContent.ItemType<VikingArmorShard>(), 2)
+				.AddIngredient(ItemID.LeadBar, 10)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
-		*/
+
+		
+	
 	}
 }

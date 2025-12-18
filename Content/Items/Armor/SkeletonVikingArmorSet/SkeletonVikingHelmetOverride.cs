@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using MoreMulticlass.Content.Buffs;
+using MoreMulticlass.Content.Items.Miscellaneous;
 
 namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 {
@@ -68,7 +69,19 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
             }
         }
         
-        
+        public override void AddRecipes() {
+			Recipe recipe = Recipe.Create(ItemID.VikingHelmet)
+				.AddIngredient(ModContent.ItemType<VikingArmorShard>(), 2)
+				.AddIngredient(ItemID.IronBar, 10)
+				.AddTile(TileID.Anvils)
+				.Register();
+
+			recipe = Recipe.Create(ItemID.VikingHelmet)
+				.AddIngredient(ModContent.ItemType<VikingArmorShard>(), 2)
+				.AddIngredient(ItemID.LeadBar, 10)
+				.AddTile(TileID.Anvils)
+				.Register();
+		}
 
     }
 }
