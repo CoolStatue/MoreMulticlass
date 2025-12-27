@@ -14,10 +14,12 @@ Items: {
 	ChummyHelmet: {
 		SetBonus:
 			'''
+			Set Bonus:
 			+{0}% ranged damage
 			+{2}% summon damage
 			+{1}% ranged crit chance
 			+{4}% damage taken
+			Projectiles gain weak homing
 			'''
 		DisplayName: Chummy Helmet
 		Tooltip:
