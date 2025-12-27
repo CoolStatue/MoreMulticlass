@@ -150,7 +150,7 @@ Items: {
 	}
 
 	HopliteArmorShard: {
-		Tooltip: ""
+		Tooltip: "Shard of a gladiator's garb"
 		DisplayName: Gladiator Armor Shard
 	}
 
