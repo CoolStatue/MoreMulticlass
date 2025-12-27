@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using System;
 using Microsoft.Xna.Framework;
+using Terraria.Audio;
 
 namespace MoreMulticlass.Content.Projectiles
 {
@@ -70,6 +71,7 @@ namespace MoreMulticlass.Content.Projectiles
             {
                 Projectile.velocity.Y = -oldVelocity.Y * elasticity;
             }
+            SoundEngine.PlaySound(SoundID.GlommerBounce, Projectile.Center);
 
             // Return false to prevent default death behavior (we want it to keep existing)
             return false;

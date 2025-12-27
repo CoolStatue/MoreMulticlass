@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using MoreMulticlass.Content.Players;
 using MoreMulticlass.Content.Debuffs;
+using Terraria.Audio;
 
 public class NanomachineMageEffect : GlobalProjectile
 {
@@ -29,6 +30,8 @@ public class NanomachineMageEffect : GlobalProjectile
                 0f, //no knockback
                 projectile.owner
             );
+
+            SoundEngine.PlaySound(SoundID.Item94, projectile.Center);
         }
 
     }

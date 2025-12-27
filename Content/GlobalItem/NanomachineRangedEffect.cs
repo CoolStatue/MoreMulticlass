@@ -5,6 +5,7 @@ using Terraria.Localization;
 using MoreMulticlass.Content.Players;
 using Microsoft.Xna.Framework;
 using MoreMulticlass.Content.Projectiles;
+using Terraria.Audio;
 
 public class NanomachineRangedEffectGlobalItem : GlobalItem
 {
@@ -30,6 +31,8 @@ public class NanomachineRangedEffectGlobalItem : GlobalItem
                 Vector2 bottomBulletOffset = new Vector2(0f, 80f);
 
                 float velocityMult = 10f;
+
+                SoundEngine.PlaySound(SoundID.Item11, player.position);
 
                 Projectile.NewProjectile(
                     player.GetSource_ItemUse(item),
