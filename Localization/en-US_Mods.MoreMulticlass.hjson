@@ -14,7 +14,6 @@ Items: {
 	ChummyHelmet: {
 		SetBonus:
 			'''
-			Set Bonus:
 			+{0}% ranged damage
 			+{2}% summon damage
 			+{1}% ranged crit chance
@@ -47,10 +46,7 @@ Items: {
 
 	SkeletonVikingBreastplate: {
 		DisplayName: Skeleton Viking Breastplate
-		Tooltip: 
-		'''
-		+{0}% melee damage
-		'''
+		Tooltip: +{0}% melee damage
 	}
 
 	SkeletonVikingLeggings: {
@@ -92,36 +88,36 @@ Items: {
 
 	NanomachineBreastplate: {
 		DisplayName: Nanomachine Breastplate
-		Tooltip: 
-		'''
-		+{0}% damage 
-		+{1}% crit chance
-		+{2} max mana
-		'''
+		Tooltip:
+			'''
+			+{0}% damage 
+			+{1}% crit chance
+			+{2} max mana
+			'''
 	}
 
 	NanomachineLeggings: {
 		DisplayName: Nanomachine Leggings
-		Tooltip: 
-		'''
-		+{0}% damage 
-		+{1}% move speed
-		'''
+		Tooltip:
+			'''
+			+{0}% damage 
+			+{1}% move speed
+			'''
 	}
 
 	NanomachineHelmet: {
-		SetBonus: 
-		'''
-		Nanomachines, Son!
-		Ranged Weapons, Magic Weapons, Whips and Swords gain special nanomachine effects 
-		'''
+		SetBonus:
+			'''
+			Nanomachines, Son!
+			Ranged Weapons, Magic Weapons, Whips and Swords gain special nanomachine effects 
+			'''
 		DisplayName: Nanomachine Helmet
-		Tooltip: 
-		'''
-		+{0}% damage 
-		+{1}% crit chance
-		+{2} max minions
-		'''
+		Tooltip:
+			'''
+			+{0}% damage 
+			+{1}% crit chance
+			+{2} max minions
+			'''
 	}
 
 	DjinnHelmet: {
@@ -133,10 +129,7 @@ Items: {
 			+{0}% Damage while cursed
 			'''
 		DisplayName: Djinn Circlet
-		Tooltip: 
-		'''
-		Accursed Circlet of the Djinn
-		'''
+		Tooltip: Accursed Circlet of the Djinn
 	}
 
 	DjinnBreastplate: {
@@ -150,51 +143,48 @@ Items: {
 	}
 
 	HopliteArmorShard: {
-		Tooltip: "Shard of a gladiator's garb"
+		Tooltip: Shard of a gladiator's garb
 		DisplayName: Gladiator Armor Shard
 	}
 
 	VenomMask: {
-		SetBonus: 
-		'''
-		+{0} max minions
-		Darts apply Paralysed on enemies
-		Minions bypass all defense of Paralysed enemies 
-		'''
+		SetBonus:
+			'''
+			+{0} max minions
+			Darts apply Paralysed on enemies
+			Minions bypass all defense of Paralysed enemies 
+			'''
 		DisplayName: Venom Mask
-		Tooltip: 
-		'''
-		+{0}% dart damage
-		+{1}% dart crit chance
-		NOTE: may not work with modded darts/dart guns
-		'''
+		Tooltip:
+			'''
+			+{0}% dart damage
+			+{1}% dart crit chance
+			NOTE: may not work with modded darts/dart guns
+			'''
 	}
 
 	VenomPants: {
 		DisplayName: Venom Pants
-		Tooltip: 
-		'''
-		+{0} max minions
-		+{1}% summon damage
-		'''
+		Tooltip:
+			'''
+			+{0} max minions
+			+{1}% summon damage
+			'''
 	}
 
 	VenomShirt: {
 		DisplayName: Venom Shirt
-		Tooltip: 
-		'''
-		+{0} max minions
-		+{1}% summon damage
-		+{2}% whip range
-		'''
+		Tooltip:
+			'''
+			+{0} max minions
+			+{1}% summon damage
+			+{2}% whip range
+			'''
 	}
 
 	VikingArmorShard: {
 		DisplayName: Viking Armor Shard
-		Tooltip: 
-		'''
-		A shard of a long-dead Viking's garb
-		'''
+		Tooltip: A shard of a long-dead Viking's garb
 	}
 }
 
@@ -210,10 +200,7 @@ Buffs: {
 	}
 
 	Accursed: {
-		Description: 
-		'''
-		Djinn's Curse Afflicts you!
-		'''
+		Description: Djinn's Curse Afflicts you!
 		DisplayName: Accursed
 	}
 
@@ -226,10 +213,7 @@ Buffs: {
 GlobalItems: {
 	SkeletonVikingHelmetOverride: {
 		DisplayName: Viking Helmet
-		Tooltip:
-			'''
-			+{0} ranged crit 
-			'''
+		Tooltip: "+{0} ranged crit "
 	}
 
 	PirateHatOverride: {
@@ -292,6 +276,19 @@ GlobalItems: {
 		DisplayName: Palladium Headgear
 		Tooltip: +{0} mana regen
 	}
+}
+
+ArmorSetBonus: {
+	PirateSet:
+		'''
+		Summons apply Marked on enemies
+		Marked makes enemies vulnerable to ranged damage
+		'''
+	SkeletonVikingSet:
+		'''
+		Below 25% hp, you go berserk 
+		In your Berserk State, you gain ranged and melee damage
+		'''
 }
 
 "Keybinds.Armor Set Ability.DisplayName": Armor  Set  Ability

@@ -18,6 +18,20 @@ namespace MoreMulticlass.Content.Items.Armor.DjinnArmorSet
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            // Only affect Iron Helmet
+            if (item.type != ItemID.DjinnsCurse)
+                return;
+
+            // Find the vanilla tooltip line
+            TooltipLine vanillaLine = tooltips.Find(
+                t => t.Mod == "Terraria" && t.Name == "Tooltip0"
+            );
+
+            // Remove it if found
+            if (vanillaLine != null)
+                tooltips.Remove(vanillaLine);
+
+
             string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.DjinnsCurseOverride.Tooltip");
 
             tooltips.Add(new TooltipLine(Mod, "Buffed",

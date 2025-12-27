@@ -21,10 +21,16 @@ namespace MoreMulticlass.Content.Items.Armor.PirateArmorSet
         
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            int lastTooltip = tooltips.FindLastIndex(
+                t => t.Mod == "Terraria" && t.Name.StartsWith("Defense")
+            );
+
             string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.PirateHatOverride.Tooltip");
 
-            tooltips.Add(new TooltipLine(Mod, "PirateHatOverride",
+
+            tooltips.Insert(lastTooltip + 1, new TooltipLine(Mod, "PirateHatOverride",
                 string.Format(tooltipText, SummonDamageIncrease, RangedCritIncrease)));
+            
         }
 
         public override void SetDefaults(Item item)
@@ -58,6 +64,8 @@ namespace MoreMulticlass.Content.Items.Armor.PirateArmorSet
                 // player.statLifeMax2 += 400; // TODO MAKE THE ACTUAL SET BONUS
 
                 player.GetModPlayer<MoreMulticlassModPlayer>().summonsApplyMarked = true;
+
+                player.setBonus = Language.GetTextValue("Mods.MoreMulticlass.ArmorSetBonus.PirateSet");
             }
         }
 

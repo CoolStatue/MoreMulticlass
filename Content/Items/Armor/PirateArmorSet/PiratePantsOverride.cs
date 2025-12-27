@@ -19,9 +19,14 @@ namespace MoreMulticlass.Content.Items.Armor.PirateArmorSet
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            int lastTooltip = tooltips.FindLastIndex(
+                t => t.Mod == "Terraria" && t.Name.StartsWith("Defense")
+            );
+
             string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.PiratePantsOverride.Tooltip");
 
-            tooltips.Add(new TooltipLine(Mod, "Buffed",
+            
+            tooltips.Insert(lastTooltip + 1, new TooltipLine(Mod, "PirateHatOverride",
                 string.Format(tooltipText, MaxMinionIncrease, MoveSpeedBonus)));
         }
 

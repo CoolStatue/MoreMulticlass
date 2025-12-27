@@ -19,10 +19,20 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+
+            int lastTooltip = tooltips.FindLastIndex(
+                t => t.Mod == "Terraria" && t.Name.StartsWith("Defense")
+            );
+
+            
+
             string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.SkeletonVikingHelmetOverride.Tooltip");
 
-            tooltips.Add(new TooltipLine(Mod, "Buffed",
-                string.Format(tooltipText)));
+            // tooltips.Add(new TooltipLine(Mod, "Buffed",
+            //     string.Format(tooltipText, RangedCritBonus)));
+
+            tooltips.Insert(lastTooltip + 1, new TooltipLine(Mod, "Buffed",
+                string.Format(tooltipText, RangedCritBonus)));
         }
 
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
@@ -73,6 +83,8 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
                     player.AddBuff(ModContent.BuffType<BerserkerRage>(), 2);
                    
                 }
+
+                player.setBonus = Language.GetTextValue("Mods.MoreMulticlass.ArmorSetBonus.SkeletonVikingSet");
                 
             }
         }
