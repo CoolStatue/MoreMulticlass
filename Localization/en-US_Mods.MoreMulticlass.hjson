@@ -191,7 +191,10 @@ Items: {
 
 	VikingArmorShard: {
 		DisplayName: Viking Armor Shard
-		Tooltip: ""
+		Tooltip: 
+		'''
+		A shard of a long-dead Viking's garb
+		'''
 	}
 }
 
