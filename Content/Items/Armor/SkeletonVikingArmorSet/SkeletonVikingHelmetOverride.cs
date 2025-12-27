@@ -17,6 +17,14 @@ namespace MoreMulticlass.Content.Items.Armor.SkeletonVikingArmorSet
 
 		// public static LocalizedText SetBonusText { get; private set; }
 
+        public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        {
+            string tooltipText = Language.GetTextValue("Mods.MoreMulticlass.GlobalItems.SkeletonVikingHelmetOverride.Tooltip");
+
+            tooltips.Add(new TooltipLine(Mod, "Buffed",
+                string.Format(tooltipText)));
+        }
+
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
         {
             return entity.type == ItemID.VikingHelmet;
