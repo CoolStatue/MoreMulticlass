@@ -195,6 +195,14 @@ Buffs: {
 }
 
 GlobalItems: {
+	SkeletonVikingHelmetOverride: {
+		DisplayName: Viking Helmet
+		Tooltip:
+			'''
+			+{0} ranged crit 
+			'''
+	}
+
 	PirateHatOverride: {
 		DisplayName: Pirate Hat
 		Tooltip:
