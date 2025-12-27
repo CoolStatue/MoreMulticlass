@@ -127,12 +127,16 @@ Items: {
 	DjinnHelmet: {
 		SetBonus:
 			'''
-			Your Projectiles are empowered and cursed!
-			All Projectiles gain +{0}% Damage
-			All Projectiles gain anti-homing
+			You are empowered and cursed!
+			Press <Set Bonus Keybind> to curse yourself!
+			The curse halves your current hp
+			+{0}% Damage while cursed
 			'''
 		DisplayName: Djinn Circlet
-		Tooltip: Accursed Circlet of the Djinn
+		Tooltip: 
+		'''
+		Accursed Circlet of the Djinn
+		'''
 	}
 
 	DjinnBreastplate: {
