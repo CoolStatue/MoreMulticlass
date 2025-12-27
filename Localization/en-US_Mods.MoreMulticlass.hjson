@@ -155,19 +155,38 @@ Items: {
 	}
 
 	VenomMask: {
-		SetBonus: Mods.MoreMulticlass.Items.VenomMask.SetBonus
+		SetBonus: 
+		'''
+		+{0} max minions
+		Darts apply Paralysed on enemies
+		Minions bypass all defense of Paralysed enemies 
+		'''
 		DisplayName: Venom Mask
-		Tooltip: ""
+		Tooltip: 
+		'''
+		+{0}% dart damage
+		+{1}% dart crit chance
+		NOTE: may not work with modded darts/dart guns
+		'''
 	}
 
 	VenomPants: {
 		DisplayName: Venom Pants
-		Tooltip: ""
+		Tooltip: 
+		'''
+		+{0} max minions
+		+{1}% summon damage
+		'''
 	}
 
 	VenomShirt: {
 		DisplayName: Venom Shirt
-		Tooltip: ""
+		Tooltip: 
+		'''
+		+{0} max minions
+		+{1}% summon damage
+		+{2}% whip range
+		'''
 	}
 
 	VikingArmorShard: {
