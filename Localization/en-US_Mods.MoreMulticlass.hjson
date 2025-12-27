@@ -210,12 +210,15 @@ Buffs: {
 	}
 
 	Accursed: {
-		Description: Mods.MoreMulticlass.Buffs.Accursed.Description
+		Description: 
+		'''
+		Djinn's Curse Afflicts you!
+		'''
 		DisplayName: Accursed
 	}
 
 	VenomParalysed: {
-		DisplayName: Venom Paralysed
+		DisplayName: Paralysed
 		Description: Mods.MoreMulticlass.Buffs.VenomParalysed.Description
 	}
 }
