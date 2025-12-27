@@ -47,7 +47,10 @@ Items: {
 
 	SkeletonVikingBreastplate: {
 		DisplayName: Skeleton Viking Breastplate
-		Tooltip: +{0}% melee damage
+		Tooltip: 
+		'''
+		+{0}% melee damage
+		'''
 	}
 
 	SkeletonVikingLeggings: {
