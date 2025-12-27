@@ -45,15 +45,12 @@ Items: {
 
 	SkeletonVikingBreastplate: {
 		DisplayName: Skeleton Viking Breastplate
-		Tooltip: 
-			'''
-			+{0}% melee damage
-			'''
+		Tooltip: +{0}% melee damage
 	}
 
 	SkeletonVikingLeggings: {
 		DisplayName: Skeleton Viking Leggings
-		Tooltip: 
+		Tooltip:
 			'''
 			+{0}% movement speed
 			+{1}% melee crit chance
@@ -61,12 +58,9 @@ Items: {
 	}
 
 	WyvernHelmet: {
-		SetBonus: 
-			'''
-			Perform a Diagonal Wyvern Dash with <Set Bonus Keybind>
-			'''
+		SetBonus: Perform a Diagonal Wyvern Dash with <Set Bonus Keybind>
 		DisplayName: Wyvern Helmet
-		Tooltip: 
+		Tooltip:
 			'''
 			+{0}% movement speed
 			+{1} max mana
@@ -75,16 +69,16 @@ Items: {
 
 	WyvernBreastplate: {
 		DisplayName: Wyvern Breastplate
-		Tooltip: 
-		'''
-		+{0}% movement speed
-		+{1} max minion
-		'''
+		Tooltip:
+			'''
+			+{0}% movement speed
+			+{1} max minion
+			'''
 	}
 
 	WyvernLeggings: {
 		DisplayName: Wyvern Leggings
-		Tooltip: 
+		Tooltip:
 			'''
 			+{0}% movement speed
 			+{1}% damage
@@ -169,6 +163,11 @@ Buffs: {
 	Accursed: {
 		Description: Mods.MoreMulticlass.Buffs.Accursed.Description
 		DisplayName: Accursed
+	}
+
+	VenomParalysed: {
+		DisplayName: Venom Paralysed
+		Description: Mods.MoreMulticlass.Buffs.VenomParalysed.Description
 	}
 }
 
