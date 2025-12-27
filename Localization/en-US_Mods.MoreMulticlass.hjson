@@ -89,18 +89,36 @@ Items: {
 
 	NanomachineBreastplate: {
 		DisplayName: Nanomachine Breastplate
-		Tooltip: ""
+		Tooltip: 
+		'''
+		+{0}% damage 
+		+{1}% crit chance
+		+{2} max mana
+		'''
 	}
 
 	NanomachineLeggings: {
 		DisplayName: Nanomachine Leggings
-		Tooltip: ""
+		Tooltip: 
+		'''
+		+{0}% damage 
+		+{1}% move speed
+		'''
 	}
 
 	NanomachineHelmet: {
-		SetBonus: Mods.MoreMulticlass.Items.NanomachineHelmet.SetBonus
+		SetBonus: 
+		'''
+		Nanomachines, Son!
+		Ranged Weapons, Magic Weapons, Whips and Swords gain special nanomachine effects 
+		'''
 		DisplayName: Nanomachine Helmet
-		Tooltip: ""
+		Tooltip: 
+		'''
+		+{0}% damage 
+		+{1}% crit chance
+		+{2} max minions
+		'''
 	}
 
 	DjinnHelmet: {
