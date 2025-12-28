@@ -1,4 +1,18 @@
-(NOTE: Mod is currently in beta, not all planned content has been added. Multiplayer may be buggy (Please help by reporting any bugs you encounter))
+(NOTE: Mod is currently in beta, not all planned content has been added. Multiplayer may be buggy (Please help by reporting any bugs you encounter at this mod's github page: https://github.com/CoolStatue/MoreMulticlass))
 Ever wished there were more multiclass armor options in Terraria? Sick of waiting for Sandstorms to be able to get Forbidden armor? Wished Hardmode Ore Armors were more interesting? 
 
 More Multiclass aims to add more options for playing multiclass, with a focus on interesting armor abilities that encourage novel play styles. 
+More Multiclass also adds QoL changes to make certain vanilla armors, such as gladiator and forbidden armor, easier to grind for.
+More Multiclass will also rework the Hardmode Ore Armor Sets to make all 6 ore armor sets viable and distinct, giving players more varied and interesting choices. (for now, only Paladium Armor's Rework is implemented) 
+
+
+Currently available content:
+
+- New content
+    - 2 new pre-hardmode armor sets
+    - 4 new hardmode armor sets
+    - Pirate vanity set reworked into armor
+
+Planned Future content:
+
+More content is planned for the future!
