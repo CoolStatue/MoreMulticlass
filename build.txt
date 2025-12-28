@@ -2,4 +2,4 @@ displayName = More Multiclass
 author = cool_statue
 version = 0.1
 
-ignoreFiles = *.xcf, *.ase
+ignoreFiles = *.xcf, *.ase, *.aseprite
