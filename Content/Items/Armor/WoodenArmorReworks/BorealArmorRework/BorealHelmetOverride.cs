@@ -28,6 +28,7 @@ namespace MoreMulticlass.Content.Items.Armor.PirateArmorSet
             if (set == "boreal")
             {
                 player.AddBuff(BuffID.Warmth, 2);
+                player.statDefense -= 1;
                 player.setBonus = Language.GetTextValue("Mods.MoreMulticlass.ArmorSetBonus.BorealWoodSet");
             }
 
