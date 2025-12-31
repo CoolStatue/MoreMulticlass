@@ -289,11 +289,8 @@ ArmorSetBonus: {
 		Below 25% hp, you go berserk 
 		In your Berserk State, you gain ranged and melee damage
 		'''
-
-	BorealWoodSet:
-		'''
-		Gain Warmth Buff
-		'''
+	BorealWoodSet: Gain Warmth Buff
+	PalmWoodSet: Gain Flippers Buff
 }
 
 "Keybinds.Armor Set Ability.DisplayName": Armor  Set  Ability
